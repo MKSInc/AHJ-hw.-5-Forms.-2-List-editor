@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/qqdqd60k463h6wdw?svg=true)](https://ci.appveyor.com/project/MKSInc/ahj-hw-5-forms-2-list-editor)
+### [Gh-page](https://mksinc.github.io/AHJ-hw.-5-Forms.-2-List-editor/)
 # 5. Домашнее задание к лекции «Работа с HTML-формами»
 
 Правила сдачи задания:
