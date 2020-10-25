@@ -1,7 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
+  padding-top: 10px;
 }
 
 h1, h2 {
   text-align: center;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 960px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.table-editor {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  position: relative;
+  width: 1em;
+  height: 1em;
+
+  font-size: 1em;
+  font-weight: bold;
+  background-color: transparent;
+
+  box-sizing: content-box;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.btn-add {
+  position: absolute;
+
+  top: -5px;
+  right: 0;
+}
+
+.btn::before {
+  position: absolute;
+  top: calc(50% - 0.5em);
+  line-height: 100%;
+}
+
+.btn-add::before {
+  content: '\271A';
+  left: calc(50% - 0.43em);
+  font-size: 1.3em;
+  font-weight: normal;
+  color: #4cae4c;
+}
+
+.btn:enabled:hover {
+  cursor: pointer;
+  border-color: gray;
+}
+
+.btn:focus {
+  outline: none;
+  border-color: gray;
+}
+
+.btn:active {
+  transform: translate(1px, 1px);
+  border-color: gray;
+}
+
+.products {
+  border-collapse: collapse;
+}
+
+.products caption {
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.products th, td {
+  border-bottom: 1px solid lightgray;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.products th {
+  font-size: 1.1em;
+  font-weight: normal;
+  text-align: left;
+  border-bottom: 2px solid lightgray;
+  border-top: 2px solid lightgray;
+}
+
+.products .col2 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.products .col3 {
+  text-align: center;
+}
+
+.btn-edit::before {
+  content: '\270E';
+  left: calc(50% - 0.5em);
+  font-size: 1.3em;
+}
+
+.btn-delete::before {
+  content: '\2718';
+  left: calc(50% - 0.4em);
+  color: red;
+}
+
+.btn[disabled]::before {
+  color: rgba(16, 16, 16, 0.3);
+}
+
+.modal {
+  position: absolute;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 0 5px 0 gray;
+}
+
+.productForm {
+  padding: 20px 35px;
+}
+
+.form-prop {
+  width: 250px;
+}
+
+.prop-value {
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.product-name-value::after {
+  content: attr(data-error-text);
+  position: absolute;
+  top: calc(2em + 2px);
+  left: 0;
+  right: 0;
+  text-align: right;
+
+  font-size: 80%;
+  font-style: italic;
+  color: red;
+}
+
+.product-cost-value::after {
+  content: attr(data-error-text);
+  position: absolute;
+  top: calc(2em + 2px);
+  left: 0;
+  right: 0;
+  text-align: right;
+
+  font-size: 80%;
+  font-style: italic;
+  color: red;
+}
+
+.form-prop input {
+  width: 100%;
+  height: 2em;
+
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+
+.form-prop input:focus {
+  outline: none;
+  border: 1px solid gray;
+}
+
+.form-control {
+  text-align: center;
+  margin-top: 25px;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.btn-modal {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+
+  background-color: rgb(239, 239, 239);
+
+  margin: 0 10px;
+  padding: 5px 10px;
+}
+
+.btn-modal:hover {
+  cursor: pointer;
+}
+
+.btn-modal:focus {
+  outline: none;
+  border: 1px solid gray;
+}
+
+.btn-modal:active {
+  transform: translate(1px, 1px);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.error-hidden::after,
+.hidden {
+  display: none;
+}
+
+.shaded {
+  opacity: 0.3;
+}
+
+/* Убрать стрелки у input type="number" */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.confirm {
+  padding: 20px;
+}
+
+.confirm-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-control {
+  text-align: center;
+  margin-right: -10px;
+  margin-left: -10px;
 }

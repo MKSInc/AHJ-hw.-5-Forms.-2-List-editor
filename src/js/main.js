@@ -1,2 +1,7 @@
-// eslint-disable-next-line no-console
-console.log('main.js run');
+import TableEditor from './TableEditor';
+
+const containerEl = document.querySelector('.container');
+
+const productsTableEditor = new TableEditor(containerEl);
+
+productsTableEditor.init();
