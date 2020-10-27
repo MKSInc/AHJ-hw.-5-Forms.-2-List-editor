@@ -70,7 +70,7 @@ describe('TableEditor', () => {
     },
   };
 
-  const baseUrl = 'http://localhost:8081';
+  const baseUrl = 'http://localhost:9000';
   beforeEach(async () => {
     els.browser = await puppetteer.launch({
       // headless: false, // show gui
