@@ -6,7 +6,8 @@
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint .",
-    "test": "jest --testPathPattern=./src/ --coverage --passWithNoTests"
+    "test": "jest --testPathPattern=./src/ --coverage --passWithNoTests",
+    "e2e": "jest --testPathPattern=./e2e/ --passWithNoTests"
   },
   "repository": "https://github.com/MKSInc/AHJ-hw.-5-Forms.-2-List-editor.git",
   "author": "Maksim <pyshkov.maksim@gmail.com>",
@@ -27,6 +28,7 @@
     "jest": "^26.5.3",
     "mini-css-extract-plugin": "^1.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "puppeteer": "^5.4.0",
     "terser-webpack-plugin": "4.2.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",

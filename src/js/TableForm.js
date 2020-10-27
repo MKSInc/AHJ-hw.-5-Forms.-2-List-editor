@@ -27,8 +27,8 @@ export default class TableForm {
         cost: '[data-field="cost"]',
       },
       errorsMessages: {
-        name: '[data-error-massage="name"]',
-        cost: '[data-error-massage="cost"]',
+        name: '[data-error-message="name"]',
+        cost: '[data-error-message="cost"]',
       },
       btns: {
         save: '[data-btn="save"]',
